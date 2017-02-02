@@ -14,11 +14,8 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        lightBulb.backgroundColor = UIColor.blue
-        
+        lightBulb.backgroundColor = UIColor.red
     }
     
     
@@ -26,10 +23,14 @@ class ViewController: UIViewController {
         
         print(sender.selectedSegmentIndex)
         
+        if sender.selectedSegmentIndex == 0 {
+            lightBulb.backgroundColor = UIColor.red
+        } else if sender.selectedSegmentIndex == 1 {
+            lightBulb.backgroundColor = UIColor.yellow
+        } else if sender.selectedSegmentIndex == 2 {
+            lightBulb.backgroundColor = UIColor.blue
+        } else if sender.selectedSegmentIndex == 3 {
+            lightBulb.backgroundColor = UIColor.green
+        }
     }
-    
-    
-
-   
-
 }
